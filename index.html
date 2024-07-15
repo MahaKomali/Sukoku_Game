@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Home Page -->
+    <div id="home-page" class="container">
+        <h1>Welcome to Sudoku Game!</h1>
+        <img src="image.png" alt="Sudoku Image" class="sudoku-image">
+        <p>Are you ready to solve some puzzles?</p>
+        <label for="grid-size">Choose the grid size:</label>
+        <select id="grid-size">
+            <option value="4">4x4</option>
+            <option value="5">5x5</option>
+            <option value="6">6x6</option>
+            <option value="7">7x7</option>
+            <option value="8">8x8</option>
+            <option value="9">9x9</option>
+            <option value="10">10x10</option>
+            <option value="11">11x11</option>
+            <option value="12">12x12</option>
+            <option value="16">16x16</option>
+        </select>
+        <button onclick="startGame()">Let's Go</button>
+    </div>
+
+    <!-- Game Page -->
+    <div id="game-page" class="container" style="display: none;">
+        <h1>Sudoku Solver</h1>
+        <p>Enter the Sudoku puzzle (use 0 for empty cells):</p>
+        <div id="sudoku-grid">
+            <!-- Sudoku grid will be generated here by JavaScript -->
+        </div>
+        <button onclick="solveSudoku()">Solve Sudoku</button>
+        <p id="message"></p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
